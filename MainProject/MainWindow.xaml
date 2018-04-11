@@ -3,7 +3,7 @@
         xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:controlzex="urn:controlzex"
-        xmlns:wpfApplication1="clr-namespace:WpfApplication1"
+        
         x:Class="WpfApplication1.MainWindow"
         BorderThickness="0" 
         ResizeMode="CanResizeWithGrip"
@@ -21,7 +21,6 @@
         </Grid.ColumnDefinitions>
         <ScrollViewer Grid.Column="0" VerticalScrollBarVisibility="Hidden">
             <Border BorderThickness="0,0,1,1" Padding="0" BorderBrush="{StaticResource AccentBaseColorBrush}">
-
                 <StackPanel>
 
                     <TextBlock Text="菜单" TextAlignment="Center" FontSize="16"/>

@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-E:\projects\WpfApplication1\WpfApplication1\obj\Debug\
+E:\projects\wpfMvvm\WpfApplication1\obj\Debug\
 WpfApplication1
 none
 false
 DEBUG;TRACE
-E:\projects\WpfApplication1\WpfApplication1\App.xaml
+E:\projects\wpfMvvm\WpfApplication1\App.xaml
 21108983079
 
 14-911693752
-791072108349
+791370871455
 DBConnect.xaml;MainWindow.xaml;
 
 False
