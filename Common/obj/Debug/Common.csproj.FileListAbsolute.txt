@@ -1,5 +1,0 @@
-E:\projects\WpfApplication1\Common\bin\Debug\Common.dll
-E:\projects\WpfApplication1\Common\bin\Debug\Common.pdb
-E:\projects\WpfApplication1\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
-E:\projects\WpfApplication1\Common\obj\Debug\Common.dll
-E:\projects\WpfApplication1\Common\obj\Debug\Common.pdb

@@ -7,19 +7,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WpfApplication1.Model
+namespace MainProject.Model
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Demo_DbEntities : DbContext
+    public partial class DbEntities : DbContext
     {
-        public Demo_DbEntities()
-            : base("name=Demo_DbEntities")
+        //public DbEntities()
+        //    : base("name=DbEntities")
+        //{
+        //}
+        public DbEntities(string connection) : base(connection)
         {
+            
         }
-    
+
+        public DbEntities() : base(Settings.SqlConnection)
+        {
+            
+        }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();

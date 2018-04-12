@@ -2,7 +2,7 @@
 using System.Windows.Input;
 
 
-namespace WpfApplication1
+namespace MainProject
 {
     /// <summary>
     /// MainWindow.xaml 的交互逻辑

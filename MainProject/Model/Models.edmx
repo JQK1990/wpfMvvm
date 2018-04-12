@@ -33,7 +33,7 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Demo_DbModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityContainer Name="Demo_DbEntities" p1:LazyLoadingEnabled="true">
+        <EntityContainer Name="DbEntities" p1:LazyLoadingEnabled="true">
           <EntitySet Name="Menu" EntityType="Demo_DbModel.Menu" />
           <EntitySet Name="User" EntityType="Demo_DbModel.User" />
         </EntityContainer>
@@ -62,7 +62,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Demo_DbModelStoreContainer" CdmEntityContainer="Demo_DbEntities">
+        <EntityContainerMapping StorageEntityContainer="Demo_DbModelStoreContainer" CdmEntityContainer="DbEntities">
           <EntitySetMapping Name="Menu">
             <EntityTypeMapping TypeName="Demo_DbModel.Menu">
               <MappingFragment StoreEntitySet="Menu">

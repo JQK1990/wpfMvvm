@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -155,5 +156,21 @@ namespace Common
             objConnetion.Close();
             return columnlist;
         }
+
+        public static bool TestConnect(string connection)
+        {
+            
+            try
+            {
+                SqlConnection objConnetion = new SqlConnection(connection);
+                objConnetion.Open();
+                return true;
+            }
+            catch (Exception e)
+            {
+               return false;
+            }
+        }
+       
     }
 }

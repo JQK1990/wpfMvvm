@@ -1,8 +1,8 @@
 using System;
 using GalaSoft.MvvmLight;
-using WpfApplication1.Model;
+using MainProject.Model;
 
-namespace WpfApplication1.ViewModel
+namespace MainProject.ViewModel
 {
     /// <summary>
     /// This class contains properties that the main View can data bind to.

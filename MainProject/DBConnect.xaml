@@ -1,4 +1,4 @@
-﻿<controls:MetroWindow x:Class="WpfApplication1.DBConnect"
+﻿<controls:MetroWindow x:Class="MainProject.DBConnect"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         DataContext="{Binding Source={StaticResource Locator}, Path=DbConnect}"
          GlowBrush="{DynamicResource AccentColorBrush}"
@@ -20,13 +20,13 @@
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" Grid.Row="1">
             <Label Content="服务器" VerticalContentAlignment="Center" Margin="65,0,10,0" Padding="5"></Label>
-            <ComboBox SelectedIndex="0" IsEditable="True" ItemsSource="{Binding ServerList}"  Width="250" Height="35" Margin="0,0,0,0"></ComboBox>
-            <Button Content="刷新" Height="30" Width="60" Margin="15,0,0,0"></Button>
+            <ComboBox Text="{Binding ServerName,Mode=OneWayToSource}" Name="SeverName" SelectedIndex="0" IsEditable="True" ItemsSource="{Binding ServerList}"  Width="250" Height="35" Margin="0,0,0,0"></ComboBox>
+            <Button Command="{Binding FlashServer}" Content="刷新" Height="30" Width="60" Margin="15,0,0,0"></Button>
         </StackPanel>
 
         <StackPanel Grid.Row="2" HorizontalAlignment="Center" Orientation="Horizontal"  Width="264" Margin="114,0">
-            <RadioButton GroupName="choose" Checked="IsUseWindows_OnChecked" Name="IsUseWindows" Padding="8,0,0,0" Content="使用Windows验证" Margin="8,0,10,0"></RadioButton>
-            <RadioButton GroupName="choose" Name="IsUsePw" Padding="8,0,10,0" Content="使用密码验证" IsChecked="True" Margin="8,0,0,0"></RadioButton>
+            <RadioButton IsEnabled="False" VerticalAlignment="Center" GroupName="choose" Checked="IsUseWindows_OnChecked" Name="IsUseWindows" Padding="8,0,0,0" Content="使用Windows验证" Margin="8,0,10,0"></RadioButton>
+            <RadioButton VerticalAlignment="Center" GroupName="choose" Name="IsUsePw" Padding="8,0,10,0" Content="使用密码验证" IsChecked="True" Margin="8,0,0,0"></RadioButton>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Grid.Row="3">
             <Label Content="用户名" VerticalContentAlignment="Center" Margin="65,0,10,0" Padding="5"></Label>
@@ -39,11 +39,12 @@
         
         <StackPanel Orientation="Horizontal"   Grid.Row="5">
             <Label Content="数据库" VerticalContentAlignment="Center" Margin="65,0,10,0" Padding="5"></Label>
-            <ComboBox Width="250" Name="DataBase" Height="35"></ComboBox>
+            <ComboBox ItemsSource="{Binding DataBaseList}" Text="{Binding DbName,Mode=OneWayToSource}" Width="250" Name="DataBase" Height="35"></ComboBox>
+            <Button Command="{Binding FlashDataBase}" Content="刷新" Height="30" Width="60" Margin="15,0,0,0"></Button>
         </StackPanel>
         
         <StackPanel Grid.Row="6" Orientation="Horizontal"  >
-            <Button Content="测试连接" Width="110" Height="45" Margin="125,0,10,0"></Button>
+            <Button Click="Test_Click" Content="测试连接" Width="110" Height="45" Margin="125,0,10,0"></Button>
             <Button Content="连接数据" Width="110" Height="45" Margin="10,0,0,0"></Button>
         </StackPanel>
     </Grid>

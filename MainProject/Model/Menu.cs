@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WpfApplication1.Model
+namespace MainProject.Model
 {
     using System;
     using System.Collections.Generic;
